@@ -1,0 +1,138 @@
+eastbound = []
+westbound = []
+ace01 = []
+ace03 = []
+ace04 = []
+ace05 = []
+ace06 = []
+ace07 = []
+ace08 = []
+ace10 = []
+
+welcomeInput = input("Welcome to the progam! Type continue to add cities to eastbound: " )
+if welcomeInput == "continue":
+  while True:
+    question = input("\n" + "enter 'yes' to add cities to the eastbound,'no' to switch to adding cities to the westbound, or 'station to start adding station times for the eastbound: ")
+    if question == 'yes':
+      cityInput = input("enter the city's name: ")
+      eastbound.append(cityInput)
+    elif question =='no':
+      while True:
+        question2 = input("\n" + "enter 'yes' to add cities to the westbound 'no' to start adding station times for the westbound: ")
+        if question2 == "yes":
+          cityInput = input("enter the city's name: ")
+          westbound.append(cityInput)
+        elif question2=="no":
+          break
+        else:
+          print("invalid input")
+    elif question == "station":
+      break
+    else:
+      print("invalid input")
+else:
+  print("invalid input")
+while True:
+  aceInputasterik = input("enter station name with a * at the end or no to switch to user program: ")
+  if aceInputasterik == "ACE01*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace01.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE03*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace03.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE04*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace04.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE05*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace05.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE06*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace06.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE07*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace07.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE08*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace08.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik == "ACE10*": 
+    while True:
+      question = input("\n" + "enter 'yes' to add times to the station or 'no' to stop adding times: ")
+      if question == 'yes':
+        timeInput1 = input("enter the time: ")
+        ace10.append(timeInput1)
+      elif question =='no':
+        break
+  if aceInputasterik =="no":
+      break
+while True:
+  userInput = input("Welcome to the user progam! Type the station name to get the location and time of each train or 'no' to end session: " )
+  if userInput == "ACE01":
+    for x in range(len(eastbound)):
+      print(eastbound[x])
+      print(ace01[x])
+  if userInput == "ACE03":
+    for x in range(len(eastbound)):
+      print(eastbound[x])
+      print(ace03[x])
+  if userInput == "ACE04":
+    for x in range(len(westbound)):
+      print(westbound[x])
+      print(ace04[x])
+  if userInput == "ACE05":
+    for x in range(len(eastbound)):
+      print(eastbound[x])
+      print(ace05[x])
+  if userInput == "ACE06":
+    for x in range(len(westbound)):
+      print(westbound[x])
+      print(ace06[x])
+  if userInput == "ACE07":
+    for x in range(len(eastbound)):
+      print(eastbound[x])
+      print(ace01[x])
+  if userInput == "ACE08":
+    for x in range(len(westbound)):
+      print(westbound[x])
+      print(ace08[x])
+  if userInput == "ACE10":
+    for x in range(len(westbound)):
+      print(westbound[x])
+      print(ace10[x])
+  if userInput == "no":
+    break
